@@ -1,0 +1,49 @@
+<%- include("../partials/loginHeader") %>
+
+<main id="main" style="margin-top: 50px;">
+    <section class="inner-page">
+        <div class="container">
+            <!-- This snippet uses Font Awesome 5 Free as a dependency. You can download it at fontawesome.io! -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                        <div class="card card-signin my-5">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Sign In</h5>
+                                <form class="form-signin" action="/login" method="POST">
+                                    <div class="form-label-group">
+                                        <input type="text" name="username" id="inputUsername" class="form-control"
+                                            placeholder="Username" required autofocus>
+                                        <label for="inputUsername">Username</label>
+                                    </div>
+                                    <div class="form-label-group">
+                                        <input type="password" name="password" id="inputPassword" class="form-control"
+                                            placeholder="Password" required>
+                                        <label for="inputPassword">Password</label>
+                                    </div>
+                                    <div style="flex-wrap: wrap;">
+                                        <div style="float: left;" class="custom-control custom-checkbox mb-3">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">Remember
+                                                password</label>
+                                        </div>
+                                        <div style="float: right;">
+                                            <a href="/forgotPass" style="color: navy;">Forget password</a>
+                                        </div>
+                                    </div>
+                                    <br /></br><br>
+                                    <button class="btn btn-lg btn-info btn-block text-uppercase w-100"
+                                        type="submit">Sign in</button>
+                                </form>
+                                <div style="margin-top:30px ;" align="center">
+                                    <p>Don't have account <a href="/signup">Sign-up</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+

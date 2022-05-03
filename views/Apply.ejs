@@ -1,0 +1,97 @@
+<%- include("./partials/header") %>
+
+  <main id="main">
+    <section id="blog" class="blog">
+        <div style="margin-top: 150px;"  class="container" data-aos="fade-up">
+        <%if(applicationStatus){%>
+           
+            <div class="alert alert-success" role="alert">
+                Your Application is succesfully submitted. Thanks for visiting our site
+            </div>
+        <%} %>
+        <%if(applicationStatus=="error"){%>
+            <div class="alert alert-danger" role="alert">
+                Error occured in submitting form
+            </div>
+        <%} %>
+          <div class="row">
+  
+            <div class=" card shadow-lg p-3 mb-5 bg-body rounded">
+
+                <form  action="/apply" method="POST" >
+                    <div class=" container" style="padding: 20px; ">
+                        <div class="title" style="padding: 20px;" >
+                            <h3 style="color:green;" >Application</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <input type="text" name="studentFName" class="form-control" id="floatingInput" placeholder="First name">
+                                    <label for="floatingInput">Studen first Name</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <input type="text" name="studentLName" class="form-control" id="floatingInput" placeholder="Last name">
+                                    <label for="floatingInput">Student last name</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <input type="date" name="dob" class="form-control" id="floatingInput" placeholder="" required>
+                                    <label for="floatingInput">Student Date of Birth</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <input type="text" name="gaurdianName" class="form-control" id="floatingInput" placeholder="Select contest end date" required>
+                                    <label for="floatingInput">Student Gaurdian's name</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <input type="tel" name="mobileNum" class="form-control" id="floatingInput" placeholder="Select contest start date" required>
+                                    <label for="floatingInput">Mobile Number</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <input type="text" name="address" class="form-control" id="floatingInput" placeholder="Select contest end date" required>
+                                    <label for="floatingInput">Address</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <input type="text" name="pincode " class="form-control" id="floatingInput" placeholder="Select contest end date" required>
+                                    <label for="floatingInput">Pin code</label>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <br/>
+                        
+                        </div>
+                        <button type="submit" class="btn btn-success btn-lg">Apply now</button>	 
+                        <br/>
+                        <br/> 
+                    </div>
+                </form>
+            </div><!-- End blog entries list -->
+  
+          </div>
+  
+        </div>
+      </section><!-- End Blog Single Section -->
+  
+  </main><!-- End #main -->
+  <script>
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+    }
+</script>
+<%- include("./partials/footer") %>

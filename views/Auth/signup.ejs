@@ -1,0 +1,51 @@
+<%- include("../partials/loginHeader") %>
+
+<main id="main">
+    <section class="inner-page">
+        <div class="container">
+            <!-- This snippet uses Font Awesome 5 Free as a dependency. You can download it at fontawesome.io! -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                        <div class="card card-signin my-5">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Sign Up</h5>
+                                <form class="form-signin" action="/signup" method="POST">
+                                    <div class="form-label-group">
+                                        <input type="text" name="username" id="inputtext" class="form-control"
+                                            placeholder="text address" required autofocus>
+                                        <label for="inputtext">Username</label>
+                                    </div>
+                                    <div class="form-label-group">
+                                        <input type="email" name="email" id="inputEmail" class="form-control"
+                                            placeholder="Email address" required autofocus>
+                                        <label for="inputEmail">Email address</label>
+                                    </div>
+                                    <div class="form-label-group">
+                                        <input type="password" name="password" id="inputPassword" class="form-control"
+                                            placeholder="Password" required>
+                                        <label for="inputPassword">Password</label>
+                                    </div>
+                                    <div class="form-label-group">
+                                        <input type="password" name="confirmPassword" id="inputPassword1" class="form-control"
+                                            placeholder="Password" required>
+                                        <label for="inputPassword1">Confirm Password</label>
+                                    </div>
+                                    <br /> <br />
+                                    <button class="btn btn-lg btn-info btn-block text-uppercase w-100" type="submit">
+                                        Sign Up
+                                    </button>
+                                </form>
+                                <div style="margin-top:30px ;" align="center">
+                                    <p>Already signed up <a href="/login">Sign-in</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
